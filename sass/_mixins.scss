@@ -1,0 +1,102 @@
+// mixins
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin transition($trans-args...) {
+    -webkit-transition: $trans-args;
+    -moz-transition: $trans-args;
+    -ms-transition: $trans-args;
+    -o-transition: $trans-args;
+    transition: $trans-args;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin column-count($columns) {
+  -webkit-column-count: $columns;
+  -moz-column-count: $columns;
+  column-count: $columns;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+// Media queries (trying this out)
+// Usage:
+//
+//  @include break-huge {
+//   width: 100%;
+//   float: none;
+//   margin: 0;
+// }
+
+@mixin break-huge {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin break-large {
+  @media only screen and (max-width: 1080px) {
+    @content;
+  }
+}
+
+@mixin break-medium {
+  @media only screen and (max-width: 780px) {
+    @content;
+  }
+}
+
+@mixin break-small {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin break-tiny {
+  @media only screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}

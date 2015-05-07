@@ -1,0 +1,19 @@
+/* Typography */
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a.read-more {
+  @include border-radius(2px);
+  background-color: #5c9b56;
+  padding: 7px 10px;
+  color: #fff;
+  font-family: $headline-font;
+  font-size: 1.2rem;
+  text-decoration: none;
+}

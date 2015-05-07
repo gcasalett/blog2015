@@ -1,0 +1,16 @@
+nav ul {
+  font-family: $headline-font;
+  font-size: 1.2rem;
+  list-style-type: none;
+  margin: 40px auto;
+  max-width: 80%;
+
+  & li {
+    margin-top: 7px;
+  }
+
+  & li ul {
+    margin: 0;
+    padding-left: 10px;
+  }
+}

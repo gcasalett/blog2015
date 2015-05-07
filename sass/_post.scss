@@ -1,0 +1,89 @@
+/* Post Styles */
+.content article {
+  max-width: $max-content-width;
+  margin: 30px 40px;
+  background: #fff;
+
+  & h2 {
+    font-family: $headline-font;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  & p.post-date {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #666;
+    margin: 0;
+  }
+  & p.post-excerpt {
+    max-width: 80%;
+    font-size: 1.2rem;
+  }
+  & a.post-link {
+    @include transition(all 0.4s ease);
+    border-left: 4px solid $yellow;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0 10px 30px;
+    & p {
+      color: $base-font-color;
+    }
+    //border-bottom: 1px solid $green;
+    &:hover {
+      background-color: lighten($yellow, 40%);
+    }
+  }
+}
+
+article[class*="category-data-highlight"] {
+  & a.post-link {
+    border-left: 4px solid $green;
+    //border-bottom: 1px solid $green;
+    &:hover {
+      background-color: lighten($green, 40%);
+    }
+  }
+}
+
+article[class*="category-link-of-the-day"] {
+  & a.post-link {
+    border-left: 4px solid $blue;
+    //border-bottom: 1px solid $green;
+    &:hover {
+      background-color: lighten($blue, 40%);
+    }
+  }
+}
+
+
+// Search form
+form {
+  max-width: 300px;
+  margin: 10px 0;
+  float: right;
+  font-family: $headline-font;
+  font-weight: 500;
+
+  & input[type="text"] {
+    border: 2px solid #ccc;
+    border-right: 0;
+    color: #aaa;
+    display: inline;
+    float: left;
+    padding: 4px 7px;
+    font-size: 1.2rem;
+    width: 230px;
+  }
+  & button[type="submit"] {
+    border: 2px solid $green;
+    color: #fff;
+    display: inline;
+    float: left;
+    background-color: $green;
+    font-size: 1.2rem;
+    padding: 4px 7px;
+    margin: 0;
+  }
+}

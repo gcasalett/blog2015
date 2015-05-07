@@ -1,0 +1,35 @@
+/* Layout Styles */
+body {
+  font-family: $base-font;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.sidebar {
+  @include span(1/5);
+  background: transparent; //#eaeaea;
+  height: 100%;
+  position: fixed;
+}
+
+img.main-logo {
+  margin: 20px auto;
+  display: block;
+}
+
+.content-wrapper {
+  @include span(4/5);
+  @include shift(1/5);
+  background: transparent;
+}
+
+header {
+  padding: 10px 60px;
+  margin: 0 0 10px 0;
+  background: #fff;
+}
+
+.content {
+  padding: 10px 0;
+  background: #fff;
+}
