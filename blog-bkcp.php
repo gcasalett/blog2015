@@ -5,6 +5,38 @@ Template Name: Blog Home
 ?>
 <?php get_header('blog'); ?>
 
+<!-- Side bar ************************************ -->
+  <div class="sidebar">
+    <img class="main-logo" src="http://nc-democracy.org/dev/wp-content/themes/DemNCv1/assets/img/logo.png" />
+
+    <nav>
+      <ul>
+        <li><a href="#">Blog Home</a></li>
+        <li><a href="#">Democracy NC Home</a></li>
+        <li><em>Categories</em>
+          <ul>
+            <li><a href="#">Link of the Day</a></li>
+            <li><a href="#">Data Highlight</a></li>
+            <li><a href="#">Media/Press</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+
+<!-- Main content area ************************************ -->
+  <div class="content-wrapper">
+
+<!-- Header ************************************ -->
+  <header>
+    <img src="http://nc-democracy.org/dev/wp-content/themes/DemNCv1/assets/img/blog-main-img.png">
+
+    <form class="head-search-form" action="">
+      <input type="text" value="search">
+      <button type="submit">Go!</button>
+    </form>
+  </header>
 
 <!-- Content ************************************ -->
 

@@ -1,15 +1,16 @@
 //Variables
 
 // Layout
-$max-content-width: 960px;
+$content-container-width: 800px;
+$max-content-width: 726px;
 
 // Colors
 $blue: #1992d1;
-$dark-blue: #2c3e50;
+$dark-blue: #004E69;
 $red: #c03a2a;
 $green: #5c9b56;
 $yellow: #efc319;
-$gray: #eaeaea;
+$gray: #777;
 $light-gray: #eaeaea;
 
 
@@ -18,11 +19,11 @@ $main-bg-color: $light-gray;
 
 
 // Fonts
-$base-font: "freight-text-pro",sans-serif;
-$headline-font: "canada-type-gibson",sans-serif;
+$base-font: "freight-text-pro", Georgia, serif;
+$headline-font: "canada-type-gibson", Helvetica, Arial, sans-serif;
 
 // Font sizes
-$base-font-size: 1.2rem;
+$base-font-size: 1.3rem;
 
 // Font colors
 $base-font-color: #333;

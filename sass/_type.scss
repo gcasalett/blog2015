@@ -1,4 +1,9 @@
 /* Typography */
+// Calcualting font sizes:
+// From REM to PX: rem * 16 = px
+// From PX to REM: px / 16 = REM
+
+
 a {
   color: $link-color;
   text-decoration: none;
@@ -16,4 +21,26 @@ a.read-more {
   font-family: $headline-font;
   font-size: 1.2rem;
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headline-font;
+  font-weight: 600;
+  color: $base-font-color;
+}
+
+h4, h5, h6 {
+  font-weight: 500;
+
+  & strong {
+    font-weight: 600;
+  }
+}
+
+.blog-archive h1 {
+  color: $dark-blue;
+}
+
+article ul {
+  padding-left: 20px;
 }

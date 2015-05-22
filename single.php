@@ -1,42 +1,29 @@
 <?php get_header('blog'); ?>
 
-      <div class="row-fluid">
-        <div class="span12">
-          <div class="content-inner">
-          <div class="container-fluid">
-                <div class="row-fluid">
+<!-- Content ************************************ -->
 
-                      <div class="span12 sub-nav">
-                      &nbsp;
-                      </div>
-                </div>
-
-                <div class="row-fluid"> 
-                
-                   <div class="span8">
-			<div class="breadcrumbs">
-			Back to <a href="http://www.democracy-nc.org/dev/blog/">Democracy NC Blog</a> 
-			</div>
+  <div class="content">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<section class="blog-post">
-			<article id="post-<?php the_ID(); ?>">
-				<header>
-					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-					<p class="post-date">Posted on <strong><?php the_time('F jS, Y'); ?></strong></p>
-				</header>
+
+
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+        <h1><?php the_title(); ?></h1>
+
+          <p class="post-date">Posted on <?php the_time('F jS, Y'); ?> at <?php the_time(); ?></p>
 				<section class="post-content">
 					<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
 
 				</section>
+
 				<div class="archive-item-info">
 					<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 					<?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 
-					<p>
-						This entry was posted on <strong><?php the_time('l, F jS, Y'); ?> at <?php the_time(); ?></strong><br />
-						Filed under <?php the_category(', ') ?>. 
+					<p class="post-cats">
+						Filed under <?php the_category(', ') ?>.
 						<!--
 						You can follow any responses to this entry through the <?php post_comments_feed_link('RSS 2.0'); ?> feed.
 
@@ -74,9 +61,6 @@
   </li>
 </ul>
 
-			
-		</section>
-
 	<?php endwhile; else: ?>
 
 		<section>
@@ -88,31 +72,18 @@
 	<?php endif; ?>
 
 </div>
- <!-- Sidebar starts here -----------------------------------------------------> 
-		
-  		   <!-- This section displays other links in the "About" section" -->	
-	           <div class="span4">
-                    	<div class="sidebar-content">
-                            
-			<div class="sidebar-item">
-			<p>You are welcome to submit comments to this moderated blog. Please treat others with respect, avoid partisan rhetoric, and help us provide a fact-based discussion of issues related to North Carolina’s political landscape. Thank you!</p>
-			</div>
-                        	
-                            <div class="sidebar-item this-section">
-                                <h3>Categories</h3>
-                                            
-                                 <ul>
-					<li><a href="http://www.democracy-nc.org/category/link-of-the-day/" title="Link-of-the-Day">Link-of-the-Day</a></li>
-					<li><a href="http://www.democracy-nc.org/category/our-issues/" title="Our Issues">Our Issues</a></li>
-					<li><a href="http://www.democracy-nc.org/category/staffblog/" title="Tales from the Frontline">Tales from the Frontline</a></li>
-				</u>
-                            
-                            </div>
-		   <!-- Rest of the sidebar items come next: -->
 
-		   <?php include "sidebar.php"; ?>
+</div> <!-- end .content-wrapper -->
 
-                    <!-- Sidebar ends here -----------------------------------------------------> 
-                    </div>
+<!-- JS BS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-<?php get_footer(); ?>
+<!-- GA Tracking -->
+
+<!-- Typekit -->
+<script src="//use.typekit.net/lwz3qno.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
+
+</body>
+</html>

@@ -28,4 +28,30 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-        <!---------------------- NAV ends here --------------------------------->
+	<!-- Side bar ************************************ -->
+	  <div class="sidebar">
+	    <img class="main-logo" src="http://nc-democracy.org/dev/wp-content/themes/DemNCv1/assets/img/logo.png" />
+
+	    <nav>
+	      <ul>
+	        <li><a href="<?php echo home_url(); ?>/blog">Blog Home</a></li>
+	        <li><a href="<?php echo home_url(); ?>">Democracy NC Home</a></li>
+	        <li class="categories-heading"><em>Categories</em>
+	          <ul>
+	            <li><a href="<?php echo home_url(); ?>/category/link-of-the-day/">Link of the Day</a></li>
+	            <li><a href="<?php echo home_url(); ?>/category/data-highlight/">Data Highlight</a></li>
+	            <li><a href="<?php echo home_url(); ?>/category/mediafeed/">Media/Press</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </nav>
+
+			<form class="blog-search-form" method="get" action="<?php bloginfo('url'); ?>/">
+						<input class="input-large search-form" type="text" id="s" name="s"  onfocus="if(this.value == 'Search the site') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Search the site'; }" type="text" value="Search the site">
+						<button type="submit" class="btn success">Go!</button>
+			</form>
+
+	  </div>
+
+	<!-- Main content area ************************************ -->
+	  <div class="content-wrapper">

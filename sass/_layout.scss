@@ -1,13 +1,20 @@
 /* Layout Styles */
 body {
   font-family: $base-font;
-  font-size: 1.2rem;
+  font-size: $base-font-size;
   color: #222;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto;
 }
 
 .sidebar {
   @include span(1/5);
-  background: transparent; //#eaeaea;
+  //background: transparent;
+  @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30));
+  background: lighten($light-gray, 5%);
   height: 100%;
   position: fixed;
 }
@@ -23,13 +30,37 @@ img.main-logo {
   background: transparent;
 }
 
-header {
-  padding: 10px 60px;
-  margin: 0 0 10px 0;
-  background: #fff;
+.content {
+  padding: 30px 60px;
+//  background: #fff;
 }
 
-.content {
-  padding: 10px 0;
-  background: #fff;
+// Images
+img.aligncenter, div.wp-caption.aligncenter{
+  display: block;
+  margin: 40px auto;
+}
+
+img.alignright {
+  max-width: 350px;
+}
+
+img.alignright, div.wp-caption.alignright {
+  float: right;
+  margin: 0 -100px 40px 40px;
+}
+
+p.wp-caption-text {
+    color: $gray;
+    font-family: $headline-font;
+    font-size: .85rem;
+    font-weight: 400;
+    margin-top: 0;
+    padding-right: 10px;
+}
+
+// Audio
+audio {
+  display: block;
+  margin: 40px auto;
 }

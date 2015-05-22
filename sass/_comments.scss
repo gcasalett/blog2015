@@ -1,0 +1,29 @@
+section.post-comments {
+  max-width: $max-content-width;
+  font-size: 1.2rem;
+
+  & h3 {
+    color: $gray;
+    margin: 40px 0 0 0;
+  }
+}
+
+article.single-comment {
+  margin: 30px 0 30px 10px;
+  padding: 10px 30px;
+  background: lighten($light-gray, 3%);
+  @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30));
+
+  & h4 {
+    margin: 10px 0 0 0;
+  }
+}
+
+form.commentForm {
+  & label, & input {
+    display: block;
+  }
+  & input {
+    margin-bottom: 15px;
+  }
+}

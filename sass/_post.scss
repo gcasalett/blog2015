@@ -1,32 +1,40 @@
-/* Post Styles */
+/* Blog Page/Single Post Styles */
 .content article {
-  max-width: $max-content-width;
-  margin: 30px 40px;
-  background: #fff;
+  max-width: $content-container-width;
+  margin: 30px 0;
+//  background: #fff;
 
+  & h1 {
+    color: $dark-blue;
+    margin: 0;
+    border-top: 7px solid $yellow;
+    padding-top: 10px;
+  }
   & h2 {
-    font-family: $headline-font;
     font-size: 2.2rem;
-    font-weight: 600;
-    color: #333;
     margin: 0;
   }
-  & p.post-date {
+  & p.post-date, & p.post-cats {
     font-style: italic;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #666;
     margin: 0;
   }
+  & p.post-cats {
+    border-top: 2px solid $light-gray;
+    border-bottom: 2px solid $light-gray;
+    margin-top: 40px;
+    padding: 5px 15px;
+  }
   & p.post-excerpt {
     max-width: 80%;
-    font-size: 1.2rem;
   }
   & a.post-link {
     @include transition(all 0.4s ease);
     border-left: 4px solid $yellow;
     text-decoration: none;
     display: block;
-    padding: 10px 0 10px 30px;
+    padding: 10px 40px 10px 30px;
     & p {
       color: $base-font-color;
     }
@@ -38,6 +46,10 @@
 }
 
 article[class*="category-data-highlight"] {
+  & h1 {
+    border-top: 7px solid $green;
+    padding-top: 10px;
+  }
   & a.post-link {
     border-left: 4px solid $green;
     //border-bottom: 1px solid $green;
@@ -48,6 +60,10 @@ article[class*="category-data-highlight"] {
 }
 
 article[class*="category-link-of-the-day"] {
+  & h1 {
+    border-top: 7px solid $blue;
+    padding-top: 10px;
+  }
   & a.post-link {
     border-left: 4px solid $blue;
     //border-bottom: 1px solid $green;
@@ -57,12 +73,14 @@ article[class*="category-link-of-the-day"] {
   }
 }
 
+section.post-content {
+  max-width: $max-content-width;
+}
 
 // Search form
-form {
-  max-width: 300px;
-  margin: 10px 0;
-  float: right;
+form.blog-search-form {
+  max-width: 270px;
+  margin: 10px auto;
   font-family: $headline-font;
   font-weight: 500;
 
@@ -74,7 +92,7 @@ form {
     float: left;
     padding: 4px 7px;
     font-size: 1.2rem;
-    width: 230px;
+    width: 200px;
   }
   & button[type="submit"] {
     border: 2px solid $green;
