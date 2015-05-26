@@ -13,8 +13,9 @@ img {
 .sidebar {
   @include span(1/5);
   //background: transparent;
-  @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30));
-  background: lighten($light-gray, 5%);
+  //@include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30));
+  background: $sidebar-bg-color;
+  border-right: 1px solid darken($light-gray,5%);
   height: 100%;
   position: fixed;
 }
