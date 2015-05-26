@@ -36,20 +36,26 @@
 	      <ul>
 	        <li><a href="<?php echo home_url(); ?>/blog">Blog Home</a></li>
 	        <li><a href="<?php echo home_url(); ?>">Democracy NC Home</a></li>
-	        <li class="categories-heading"><em>Categories</em>
-	          <ul>
-	            <li><a href="<?php echo home_url(); ?>/category/link-of-the-day/">Link of the Day</a></li>
-	            <li><a href="<?php echo home_url(); ?>/category/data-highlight/">Data Highlight</a></li>
-	            <li><a href="<?php echo home_url(); ?>/category/mediafeed/">Media/Press</a></li>
-	          </ul>
-	        </li>
+	        <li class="categories-heading"><em>Categories</em></li>
+          <li><a href="<?php echo home_url(); ?>/category/link-of-the-day/">Link of the Day</a></li>
+          <li><a href="<?php echo home_url(); ?>/category/data-highlight/">Data Highlight</a></li>
+          <li><a href="<?php echo home_url(); ?>/category/mediafeed/">Media/Press</a></li>
 	      </ul>
 	    </nav>
 
 			<form class="blog-search-form" method="get" action="<?php bloginfo('url'); ?>/">
-						<input class="input-large search-form" type="text" id="s" name="s"  onfocus="if(this.value == 'Search the site') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Search the site'; }" type="text" value="Search the site">
+						<input class="input-large search-form" type="text" id="s" name="s"  onfocus="if(this.value == 'Search the blog') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Search the blog'; }" type="text" value="Search the blog">
 						<button type="submit" class="btn success">Go!</button>
 			</form>
+
+			<ul class="sidebar-socmed">
+        <li><a href="http://www.twitter.com/democracync" title="on Twitter: @democraycnc" target="_blank"><img src="http://www.democracy-nc.org/wp-content/themes/DemNCv1/images/twitter.png" /></a></li>
+        <li><a href="http://www.facebook.com/democracynorthcarolina" title="Facebook" target="_blank"><img src="http://www.democracy-nc.org/wp-content/themes/DemNCv1/images/facebook.png" /></a></li>
+        <li><a href="http://www.youtube.com/demncorg" title="Our YouTube Channel" target="_blank"><img src="http://www.democracy-nc.org/wp-content/themes/DemNCv1/images/youtube.png" /></a></li>
+				<li><a href="http://flic.kr/ps/2tFRDd" title="Democracy NC on Flickr" target="_blank"><img src="http://www.democracy-nc.org/wp-content/themes/DemNCv1/images/flickr.png" /></a></li>
+				<li><a href="http://instagram.com/democracy_nc" title="Democracy NC Instagram" target="_blank"><img src="http://www.democracy-nc.org/wp-content/themes/DemNCv1/images/Instagram-1.png" /></a></li>
+	    </ul>
+
 
 	  </div>
 

@@ -10,18 +10,8 @@ img {
   height: auto;
 }
 
-.sidebar {
-  @include span(1/5);
-  //background: transparent;
-  //@include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30));
-  background: $sidebar-bg-color;
-  border-right: 1px solid darken($light-gray,5%);
-  height: 100%;
-  position: fixed;
-}
-
 img.main-logo {
-  margin: 20px auto;
+  margin: 20px 0;
   display: block;
 }
 
@@ -29,11 +19,17 @@ img.main-logo {
   @include span(4/5);
   @include shift(1/5);
   background: transparent;
+  margin-left: -10px;
+  z-index: -999;
+
+  @include break-huge {
+    @include col(1);
+    @include unshift();
+  }
 }
 
 .content {
   padding: 30px 60px;
-//  background: #fff;
 }
 
 // Images
@@ -64,4 +60,29 @@ p.wp-caption-text {
 audio {
   display: block;
   margin: 40px auto;
+}
+
+// Pagination
+
+ul.pager {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+  margin-top: 40px;
+
+  & li {
+    display: inline;
+    margin-right: 10px;
+  }
+  & li a {
+    background: $green;
+    color: #fff;
+    font-family: $headline-font;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+  }
+  & li a:hover {
+    text-decoration: none;
+    background: lighten($green, 10%);
+  }
 }

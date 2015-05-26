@@ -38,6 +38,13 @@
   }
 }
 
+@mixin text-shadow($top, $left, $blur, $color, $inset:"") {
+
+      -webkit-text-shadow:$top $left $blur $color #{$inset};
+      -moz-text-shadow:$top $left $blur $color #{$inset};
+      text-shadow:$top $left $blur $color #{$inset};
+    }
+
 // Media queries (trying this out)
 // Usage:
 //
@@ -47,8 +54,14 @@
 //   margin: 0;
 // }
 
+@mixin break-massive {
+  @media only screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
 @mixin break-huge {
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1180px) {
     @content;
   }
 }

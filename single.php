@@ -2,15 +2,23 @@
 
 <!-- Content ************************************ -->
 
+  <div class="feature-blog-hero">
+
+    <?php if( get_field("feature_image") ): ?>
+    <img class="feature-hero-image" src="<?php the_field('feature_image') ?>" />
+  </div>
+<?php endif; ?>
+
   <div class="content">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <h1><?php the_title(); ?></h1>
-
+        <div class="post-header">
+          <h1><?php the_title(); ?></h1>
           <p class="post-date">Posted on <?php the_time('F jS, Y'); ?> at <?php the_time(); ?></p>
+        </div>
 				<section class="post-content">
 					<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
 

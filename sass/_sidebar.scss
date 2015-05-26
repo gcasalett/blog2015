@@ -1,0 +1,83 @@
+.sidebar {
+  @include span(1/5);
+  //background: transparent;
+  //@include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30));
+  background: $sidebar-bg-color;
+  border-right: 1px solid darken($light-gray,5%);
+  height: 100%;
+  position: fixed;
+  padding-left: 30px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  z-index: 100;
+
+  @include break-massive {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include break-huge {
+    border-bottom: 1px solid darken($light-gray,5%);
+    width: 235px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+
+// Search form
+form.blog-search-form {
+  @include cf();
+  max-width: 250px;
+  margin: 10px 0;
+  font-family: $headline-font;
+  font-weight: 500;
+
+  & input[type="text"] {
+    border: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    border-right: 0;
+    color: #aaa;
+    display: inline;
+    float: left;
+    padding: 2px 7px;
+    font-size: 1.1rem;
+    width: 180px;
+  }
+  & button[type="submit"] {
+    border: 1px solid $green;
+    color: #fff;
+    display: inline;
+    float: left;
+    background-color: $green;
+    font-size: 1.1rem;
+    padding: 2px 7px;
+    margin: 0;
+  }
+}
+
+ul.sidebar-socmed {
+  list-style-type: none;
+  padding-left: 0;
+  display: block;
+  margin-top: 30px;
+
+  & li {
+    display: inline;
+    line-height: 20px;
+  }
+  & li a {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    padding-right: 7px;
+
+    @include break-massive {
+      padding-right: 4px;
+    }
+  }
+  & li a:hover {
+    @include opacity(.7);
+  }
+}

@@ -29,18 +29,50 @@ h1, h2, h3, h4, h5, h6 {
   color: $base-font-color;
 }
 
-h4, h5, h6 {
+h3, h4, h5, h6 {
   font-weight: 500;
+  color: $gray;
+  margin-bottom: 5px;
 
   & strong {
     font-weight: 600;
   }
 }
 
-.blog-archive h1 {
+.blog-archive h1, h2 {
   color: $dark-blue;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 2.8rem;
+}
+
+h2 + h3, h3 + h4 {
+  margin-top: 0;
+}
+
+h3 + p, h4 + p {
+  margin-top: 10px;
+}
+
+p + h3, p + h4 {
+  margin-top: 30px;
 }
 
 article ul {
   padding-left: 20px;
+}
+
+blockquote {
+  margin-left: 20px;
+  margin-right: 0;
+  padding: 10px 10px 10px 20px;
+  border-left: 4px solid lighten($green, 15%);
+  background: $light-gray;
+  font-style: italic;
+  font-size: 1.4rem;
+  & p {
+    margin: 0;
+  }
 }
