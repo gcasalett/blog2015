@@ -30,7 +30,9 @@
 
 	<!-- Side bar ************************************ -->
 	  <div class="sidebar">
-	    <img class="main-logo" src="http://nc-democracy.org/dev/wp-content/themes/DemNCv1/assets/img/logo.png" />
+			<a href="<?php echo home_url(); ?>/blog" atl="Democracy NC Blog">
+	    <img class="main-logo" src="http://nc-democracy.org/dev/wp-content/themes/DemNCv1/assets/img/blog-logo.png" />
+			</a>
 
 	    <nav>
 	      <ul>
@@ -48,12 +50,14 @@
 						<button type="submit" class="btn success">Go!</button>
 			</form>
 
+			<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us11.list-manage.com","uuid":"aa95f8aeb4d271aaf586cc1de","lid":"27764c6a48"}) })</script>
+
 			<ul class="sidebar-socmed">
-        <li><a href="http://www.twitter.com/democracync" title="on Twitter: @democraycnc" target="_blank"><img src="http://www.democracy-nc.org/wp-content/themes/DemNCv1/images/twitter.png" /></a></li>
-        <li><a href="http://www.facebook.com/democracynorthcarolina" title="Facebook" target="_blank"><img src="http://www.democracy-nc.org/wp-content/themes/DemNCv1/images/facebook.png" /></a></li>
-        <li><a href="http://www.youtube.com/demncorg" title="Our YouTube Channel" target="_blank"><img src="http://www.democracy-nc.org/wp-content/themes/DemNCv1/images/youtube.png" /></a></li>
-				<li><a href="http://flic.kr/ps/2tFRDd" title="Democracy NC on Flickr" target="_blank"><img src="http://www.democracy-nc.org/wp-content/themes/DemNCv1/images/flickr.png" /></a></li>
-				<li><a href="http://instagram.com/democracy_nc" title="Democracy NC Instagram" target="_blank"><img src="http://www.democracy-nc.org/wp-content/themes/DemNCv1/images/Instagram-1.png" /></a></li>
+        <li><a class="blog-twitter" href="http://www.twitter.com/democracync" title="on Twitter: @democraycnc" target="_blank"></a></li>
+        <li><a class="blog-facebook" href="http://www.facebook.com/democracynorthcarolina" title="Facebook" target="_blank"></a></li>
+        <li><a class="blog-youtube" href="http://www.youtube.com/demncorg" title="Our YouTube Channel" target="_blank"></a></li>
+				<li><a class="blog-flickr" href="http://flic.kr/ps/2tFRDd" title="Democracy NC on Flickr" target="_blank"></a></li>
+				<li><a class="blog-instagram" href="http://instagram.com/democracy_nc" title="Democracy NC Instagram" target="_blank"></a></li>
 	    </ul>
 
 

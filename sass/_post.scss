@@ -15,6 +15,16 @@
     margin: 0;
     &:first-child {
       margin-top: 20px;
+
+      @include break-small {
+        margin-top: 0;
+      }
+    }
+    @include break-small {
+      font-size: 1.8rem;
+      line-height: 2rem;
+      padding-bottom: 10px;
+      text-decoration: underline;
     }
   }
   & p.post-date, & p.post-cats {
@@ -44,6 +54,10 @@
     //border-bottom: 1px solid $green;
     &:hover {
       background-color: lighten($yellow, 40%);
+    }
+
+    @include break-medium {
+      padding: 3px 20px;
     }
   }
 }
@@ -89,13 +103,15 @@ article[class*="category-link-of-the-day"] {
 article[class*="category-feature"] {
   margin-top: 0;
   & div.post-header {
+    background-color: rgba(31,31,32,.6);
     position: absolute;
     top: 13%;
-    left: 40px;
+    left: 0;
+    padding: 20px;
     width: 800px;
 
     @include break-massive {
-      top: 10%;  
+      top: 10%;
     }
     @include break-huge {
       top: 7%;
@@ -104,11 +120,11 @@ article[class*="category-feature"] {
   & h1 {
     border: 0;
     color: #fff;
-    @include text-shadow(2px, 2px, 2px, rgba(0, 0, 0, 0.5));
+    //@include text-shadow(2px, 2px, 2px, rgba(61,62,63,.7));
   }
   & p.post-date {
     color: #fff;
-    @include text-shadow(1px, 1px, 1px, rgba(0, 0, 0, 0.5));
+    //@include text-shadow(1px, 1px, 1px, rgba(61,62,63,.7));
   }
   & p:first-child {
     margin-top: 0;

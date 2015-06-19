@@ -8,7 +8,13 @@ Template Name: Blog Home
 
 <!-- Content ************************************ -->
 
-<div class="content">
+<div class="content archive">
+
+  <div class="hamburger-container">
+    <p>Democracy NC Blog</p>
+    <a id="hamburger-menu" class="open-menu"></a>
+  </div>
+
   <?php
   $temp = $wp_query;
   $wp_query= null;
@@ -60,6 +66,7 @@ Template Name: Blog Home
 
 <!-- JS BS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="<?php echo home_url(); ?>/wp-content/themes/DemNCv1/assets/js/scripts.js"></script>
 
 <!-- GA Tracking -->
 

@@ -9,7 +9,6 @@ html {
   font-family: $base-font;
   -ms-text-size-adjust: 100%; // 2
   -webkit-text-size-adjust: 100%; // 2
-  background: #fff; //url('../assets/img/main-bg.jpg') repeat;
   background-attachment: fixed;
   font-size: 100%;
 }
@@ -23,6 +22,7 @@ html, body {
   padding: 0;
   height: 100%;
   color: $base-font-color;
+  background-color: $main-bg-color;
 }
 
 // HTML5 display definitions

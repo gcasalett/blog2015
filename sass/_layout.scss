@@ -20,7 +20,6 @@ img.main-logo {
   @include shift(1/5);
   background: transparent;
   margin-left: -10px;
-  z-index: -999;
 
   @include break-huge {
     @include col(1);
@@ -30,6 +29,16 @@ img.main-logo {
 
 .content {
   padding: 30px 60px;
+
+  @include break-huge {
+    margin-top: 50px;
+  }
+  @include break-medium {
+    padding: 30px;
+  }
+  @include break-small {
+    padding: 30px 20px;
+  }
 }
 
 // Images

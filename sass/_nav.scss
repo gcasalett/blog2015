@@ -1,13 +1,30 @@
 nav ul {
-  font-family: $headline-font;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   list-style-type: none;
   margin: 40px 0;
   max-width: 80%;
   padding-left: 0;
 
   & li {
-    margin-top: 7px;
+    border-bottom: 1px solid $sidebar-link-border-color;
+    padding: 0;
+
+    &.categories-heading {
+      border: 0;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+
+  & li a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+
+    &:hover {
+      text-decoration: none;
+      background-color: $sidebar-link-border-color;
+    }
   }
 
   & li ul {
@@ -18,4 +35,63 @@ nav ul {
 
 li.categories-heading {
   margin-top: 15px;
+}
+
+.hamburger-container {
+  background-color: $sidebar-bg-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  display: none;
+  visibility: hidden;
+
+  & p {
+    color: #fff;
+    font-family: $headline-font;
+    line-height: 60px;
+    margin: 0 0 0 20px;
+  }
+
+  @include break-huge {
+    display: block;
+    visibility: visible;
+  }
+}
+
+#hamburger-menu, .blog-facebook, .blog-flickr, .blog-instagram, .blog-twitter, .blog-youtube {
+  background-image: url("../assets/img/sprites.png");
+  width: 32px;
+  height: 32px;
+}
+
+#hamburger-menu {
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 42px;
+}
+.open-menu {
+  background-position: 0 -1px;
+}
+.close-menu {
+  background-position: -40px -1px;
+}
+.blog-facebook{
+	background-position: -221px -1px;
+}
+.blog-flickr{
+	background-position: -186px -1px;
+}
+.blog-instagram{
+	background-position: -151px 0;
+}
+.blog-twitter{
+	background-position: -117px -1px;
+}
+.blog-youtube{
+	background-position: -81px -1px;
 }

@@ -3,13 +3,12 @@
   //background: transparent;
   //@include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.30));
   background: $sidebar-bg-color;
-  border-right: 1px solid darken($light-gray,5%);
+  border-right: 1px solid $sidebar-link-border-color;
   height: 100%;
   position: fixed;
   padding-left: 30px;
   padding-right: 10px;
   box-sizing: border-box;
-  z-index: 100;
 
   @include break-massive {
     padding-left: 20px;
@@ -18,10 +17,11 @@
   @include break-huge {
     border-bottom: 1px solid darken($light-gray,5%);
     width: 235px;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: -235px;
     height: 100%;
+    z-index: 100;
   }
 }
 
@@ -43,6 +43,10 @@ form.blog-search-form {
     padding: 2px 7px;
     font-size: 1.1rem;
     width: 180px;
+
+    @include break-massive {
+      width: 130px;
+    }
   }
   & button[type="submit"] {
     border: 1px solid $green;
@@ -68,13 +72,11 @@ ul.sidebar-socmed {
   }
   & li a {
     float: left;
-    width: 30px;
-    height: 30px;
     margin-top: 4px;
-    padding-right: 7px;
+    margin-right: 7px;
 
     @include break-massive {
-      padding-right: 4px;
+      margin-right: 4px;
     }
   }
   & li a:hover {

@@ -23,7 +23,10 @@ form.commentForm {
   & label, & input {
     display: block;
   }
-  & input {
+  & input, & textarea {
     margin-bottom: 15px;
+    @include break-small {
+      max-width: 100%;
+    }
   }
 }

@@ -13,11 +13,13 @@ $yellow: #efc319;
 $gray: #777;
 $light-gray: #eaeaea;
 
-$sidebar-bg-color: #fafafa;
+$sidebar-bg-color: #3d3e3f; //#fafafa;
+$sidebar-link-border-color: #494b4c;
+$feature-post-header-bg-color: #1f1f20;
 
 
 $footer-bg-color: $dark-blue;
-$main-bg-color: $light-gray;
+$main-bg-color: #f5f6f3;
 
 
 // Fonts
@@ -38,7 +40,8 @@ $form-value-color: #aaaaaa;
 
 
 // Media query break points (they're mixins)
-// huge: 1200px
+// massive: 1400px;
+// huge: 1180px
 // large: 1080px;
 // medium: 780px;
 // small: 480px;
